@@ -40,7 +40,6 @@ def rectangle(start, end):
     pass  # TODO
 
 def triangle(start, end):
-    "Draw triangle from start to end."
     up()
     goto(start.x, start.y)
     down()
@@ -48,7 +47,6 @@ def triangle(start, end):
     goto(end.x, start.y)
     goto((end.x+start.x)/2, end.y)
     end_fill()                   
-    pass  # TODO
 
 def tap(x, y):
     "Store starting point or draw shape."
@@ -76,6 +74,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'),'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', makeCircle), 'c')
