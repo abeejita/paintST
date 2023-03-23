@@ -37,16 +37,33 @@ def makeCircle(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
-
-def triangle(start, end):
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
-    goto(end.x, start.y)
-    goto((end.x+start.x)/2, end.y)
-    end_fill()                   
+    lado = (end.x - start.x)
+
+    for count in range(2):
+        forward(lado)
+        left(90)
+        forward(lado + lado)
+        left(90)
+
+    end_fill()
+
+def triangle(start, end):
+    "Draw triangle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    lado = (end.x - start.x)
+
+    for count in range(3):
+        forward(lado)
+        left(120)
+
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
