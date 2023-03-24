@@ -134,6 +134,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+# Se agregó el color amaillo
 onkey(lambda: color('yellow'),'Y')
 
 # Se dibujan las distintas formas de acuerdo
